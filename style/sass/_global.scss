@@ -1,0 +1,59 @@
+// Primary
+$introAndEmailSignUpBackground: hsl(217, 28%, 15%);
+$mainBackground: hsl(218, 28%, 13%);
+$footerBackground: hsl(216, 53%, 9%);
+$testimonialsBackground: hsl(219, 30%, 18%);
+
+// Accent
+$cyan: hsl(176, 68%, 64%);
+$blue: hsl(198, 60%, 50%);
+$lightRed: hsl(0, 100%, 63%);
+
+// Neutral
+$white: hsl(0, 0%, 100%);
+
+// Font
+$headingFont: "Raleway", sans-serif;
+$bodyFont: "Open Sans", sans-serif;
+
+// FontWeight
+$fontWeight1: 400;
+$fontWeight2: 700;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $mainBackground;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: cyan;
+    border-radius: 5px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headingFont;
+}
+a {
+  text-decoration: none;
+  color: $white;
+  font-size: 0.8rem;
+  transition: all 0.3s;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

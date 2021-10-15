@@ -1,0 +1,70 @@
+.testimonial-container {
+  padding: 3em 2.5em 15em 2.5em;
+
+  width: 100%;
+  background: $mainBackground;
+
+  .content {
+    width: 100%;
+    position: relative;
+
+    // Layout
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+
+    .testimonial {
+      width: 18em;
+      background: $testimonialsBackground;
+      padding: 1.7em;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 2;
+      position: relative;
+
+      .bg-qoutes {
+        position: absolute;
+        width: auto;
+        height: 1em;
+        left: 7px;
+        top: 10px;
+      }
+
+      .testimony {
+        font-size: 0.8rem;
+        line-height: 1.7em;
+        opacity: 0.8;
+      }
+      .testimonial-profile {
+        margin-top: 1.2em;
+        display: flex;
+
+        .testimony-name {
+          font-size: 0.8rem;
+          margin-left: 1.5em;
+        }
+        img {
+          width: auto;
+          height: 3em;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 375px) {
+    padding: 3em 1em 15em 1em;
+    .content {
+      .testimonial {
+        min-width: 100%;
+      }
+    }
+  }
+  @media screen and (max-width: 936px) {
+    .content {
+      grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+      gap: 2em;
+      .testimonial {
+        width: 100%;
+      }
+    }
+  }
+}

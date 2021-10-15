@@ -1,0 +1,69 @@
+.about-container {
+  padding: 7em 2.5em 5em 2.5em;
+  width: 100%;
+  background: $mainBackground;
+
+  .content {
+    width: 100%;
+
+    // Layout
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+
+    .about-image {
+      width: auto;
+      height: 18em;
+    }
+
+    .about-content {
+      margin-top: 3em;
+
+      h1 {
+        font-size: 1.9em;
+        margin-bottom: 0.5em;
+      }
+
+      p {
+        font-size: 0.8em;
+        margin-bottom: 1.5em;
+        opacity: 0.8;
+      }
+
+      .link-to {
+        width: 180px;
+        border-bottom: solid 2px $cyan;
+        padding-bottom: 3px;
+        cursor: pointer;
+        color: $cyan;
+        transition: all 0.3s;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          color: $white;
+        }
+
+        img {
+          width: auto;
+          height: 1.8em;
+          margin-left: 0.2em;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 854px) {
+    padding: 2em 1em 5em 1em;
+    .content {
+      grid-template-columns: 1fr;
+
+      .about-image {
+        margin: auto;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

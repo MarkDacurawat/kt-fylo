@@ -1,0 +1,694 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*::-webkit-scrollbar {
+  width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #181f2a;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: cyan;
+  border-radius: 5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.8rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+body #main {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #1c2431;
+}
+
+body .navbar {
+  padding: 0.5em 2.5em;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+body .navbar .navbar-content {
+  padding: 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .navbar .navbar-content .logo {
+  width: 6.3em;
+  height: auto;
+  cursor: pointer;
+}
+
+body .navbar .navbar-content .navlinks a {
+  margin: 0 0.3em;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 375px) {
+  body .navbar {
+    padding: 0.5em 1em;
+  }
+}
+
+body .wrapper {
+  width: 100%;
+  position: relative;
+  margin-top: 8em;
+}
+
+body .wrapper .content {
+  width: 100%;
+  z-index: 5;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+body .wrapper .content .intro-illustration {
+  width: auto;
+  height: 22em;
+  margin: auto;
+  z-index: 5;
+}
+
+body .wrapper .content .intro-content {
+  margin: auto;
+  text-align: center;
+  max-width: 31em;
+  width: auto;
+  z-index: 5;
+}
+
+body .wrapper .content .intro-content h1 {
+  margin: 1em 0;
+  font-size: 1.6em;
+}
+
+body .wrapper .content .intro-content p {
+  font-size: 0.83em;
+  opacity: 0.8;
+  line-height: 1.8em;
+}
+
+body .wrapper .content .intro-content .intro-button {
+  border: none;
+  outline: none;
+  padding: 1em 6.5em;
+  margin-top: 1em;
+  font-weight: 700;
+  border-radius: 15px;
+  background: #65e2d9;
+  cursor: pointer;
+}
+
+body .wrapper .bg-curv {
+  width: 100vw;
+  height: 50vh;
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  background: url("../../images/bg-curvy-desktop.svg") no-repeat center center/cover;
+}
+
+@media screen and (max-width: 425px) {
+  body .wrapper .intro-content {
+    padding: 0 1em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body .wrapper .content {
+    padding: 0 1em;
+  }
+  body .wrapper .content .intro-illustration {
+    width: 100%;
+    height: auto;
+  }
+}
+
+body .services-container {
+  padding: 10em 2.5em 0 2.5em;
+  width: 100%;
+  background: #181f2a;
+  z-index: 5;
+}
+
+body .services-container .content {
+  width: 100%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (19em)[2];
+      grid-template-columns: repeat(2, 19em);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  gap: 3em;
+  row-gap: 5em;
+}
+
+body .services-container .content .service {
+  width: auto;
+  cursor: pointer;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .services-container .content .service .service-content {
+  text-align: center;
+}
+
+body .services-container .content .service .service-content h3 {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 1em 0;
+}
+
+body .services-container .content .service .service-content p {
+  opacity: 0.8;
+  font-size: 0.8em;
+  line-height: 1.6em;
+}
+
+@media screen and (max-width: 768px) {
+  body .services-container {
+    padding: 5em 1em 5em 1em;
+  }
+  body .services-container .content {
+    -ms-grid-columns: (minmax(19em, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+  }
+}
+
+body .about-container {
+  padding: 7em 2.5em 5em 2.5em;
+  width: 100%;
+  background: #181f2a;
+}
+
+body .about-container .content {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+}
+
+body .about-container .content .about-image {
+  width: auto;
+  height: 18em;
+}
+
+body .about-container .content .about-content {
+  margin-top: 3em;
+}
+
+body .about-container .content .about-content h1 {
+  font-size: 1.9em;
+  margin-bottom: 0.5em;
+}
+
+body .about-container .content .about-content p {
+  font-size: 0.8em;
+  margin-bottom: 1.5em;
+  opacity: 0.8;
+}
+
+body .about-container .content .about-content .link-to {
+  width: 180px;
+  border-bottom: solid 2px #65e2d9;
+  padding-bottom: 3px;
+  cursor: pointer;
+  color: #65e2d9;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .about-container .content .about-content .link-to:hover {
+  color: white;
+}
+
+body .about-container .content .about-content .link-to img {
+  width: auto;
+  height: 1.8em;
+  margin-left: 0.2em;
+}
+
+@media screen and (max-width: 854px) {
+  body .about-container {
+    padding: 2em 1em 5em 1em;
+  }
+  body .about-container .content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  body .about-container .content .about-image {
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
+}
+
+body .testimonial-container {
+  padding: 3em 2.5em 15em 2.5em;
+  width: 100%;
+  background: #181f2a;
+}
+
+body .testimonial-container .content {
+  width: 100%;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+}
+
+body .testimonial-container .content .testimonial {
+  width: 18em;
+  background: #202a3c;
+  padding: 1.7em;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+}
+
+body .testimonial-container .content .testimonial .bg-qoutes {
+  position: absolute;
+  width: auto;
+  height: 1em;
+  left: 7px;
+  top: 10px;
+}
+
+body .testimonial-container .content .testimonial .testimony {
+  font-size: 0.8rem;
+  line-height: 1.7em;
+  opacity: 0.8;
+}
+
+body .testimonial-container .content .testimonial .testimonial-profile {
+  margin-top: 1.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .testimonial-container .content .testimonial .testimonial-profile .testimony-name {
+  font-size: 0.8rem;
+  margin-left: 1.5em;
+}
+
+body .testimonial-container .content .testimonial .testimonial-profile img {
+  width: auto;
+  height: 3em;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 375px) {
+  body .testimonial-container {
+    padding: 3em 1em 15em 1em;
+  }
+  body .testimonial-container .content .testimonial {
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 936px) {
+  body .testimonial-container .content {
+    -ms-grid-columns: (minmax(18em, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    gap: 2em;
+  }
+  body .testimonial-container .content .testimonial {
+    width: 100%;
+  }
+}
+
+body .email-container {
+  width: 100%;
+  padding: 0 2.5em;
+  position: absolute;
+  margin-top: -8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .email-container .content {
+  max-width: 650px;
+  background: #202a3c;
+  padding: 2em;
+  text-align: center;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .email-container .content h1 {
+  margin-bottom: 0.8em;
+}
+
+body .email-container .content p {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-bottom: 1em;
+}
+
+body .email-container .content #error-message {
+  text-align: left;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: 0.5em;
+  font-size: 0.8em;
+  margin-left: 1em;
+  color: #ff4242;
+  font-weight: 700;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+body .email-container .content #email {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 1.3em;
+  font-size: 0.7rem;
+  border-radius: 20px;
+  margin-bottom: 1.5em;
+}
+
+body .email-container .content button {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 1em;
+  border-radius: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#65e2d9), to(rgba(20, 250, 247, 0.5)));
+  background: linear-gradient(90deg, #65e2d9, rgba(20, 250, 247, 0.5));
+  cursor: pointer;
+  color: white;
+}
+
+@media screen and (max-width: 375px) {
+  body .email-container {
+    padding: 0 1em;
+  }
+}
+
+body footer {
+  width: 100%;
+  background: #0b1523;
+  padding: 15em 2.5em 0 2.5em;
+}
+
+body footer .content {
+  width: 100%;
+  margin-bottom: 2em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2em;
+}
+
+body footer .content .about {
+  width: 13em;
+}
+
+body footer .content .about .about-logo {
+  width: auto;
+  height: 2.5em;
+  margin-bottom: 1em;
+}
+
+body footer .content .about-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body footer .content .about-content img {
+  width: 3.3em;
+  margin: 0.8em;
+}
+
+body footer .content .about-content p {
+  font-size: 0.8rem;
+  line-height: 1.6em;
+  opacity: 0.8;
+}
+
+body footer .content .contacts {
+  padding-top: 3em;
+}
+
+body footer .content .contacts .phone-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer .content .contacts .phone-contact img {
+  width: auto;
+  height: 0.8em;
+  margin: 0.8em;
+}
+
+body footer .content .contacts .phone-contact p {
+  font-size: 0.8rem;
+}
+
+body footer .content .contacts .email-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer .content .contacts .email-contact img {
+  width: auto;
+  height: 0.8em;
+  margin: 0.8em;
+}
+
+body footer .content .contacts .email-contact p {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+body footer .content .links {
+  padding-top: 2.7em;
+  padding-left: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
+}
+
+body footer .content .links .col-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body footer .content .links .col-1 a {
+  margin-bottom: 1em;
+  opacity: 0.8;
+}
+
+body footer .content .links .col-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body footer .content .links .col-2 a {
+  margin-bottom: 1em;
+  opacity: 0.8;
+}
+
+body footer .content .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body footer .content .social-media a {
+  padding: 0.85em;
+  border: solid 1px white;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 0.5em;
+  cursor: pointer;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body footer .content .social-media a:hover {
+  color: #65e2d9;
+  border-color: #65e2d9;
+}
+
+body footer .attribution {
+  padding: 1.5em;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+body footer .attribution a {
+  color: #3e52a3;
+  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 831px) {
+  body footer {
+    padding: 15em 2.5em 0 2.5em;
+  }
+  body footer .content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 0;
+  }
+  body footer .content .about {
+    width: 100%;
+  }
+  body footer .content .about .about-content img {
+    width: 1em;
+    margin: 0.8em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body footer {
+    padding: 20em 1em 0 1em;
+  }
+}
+/*# sourceMappingURL=index.css.map */

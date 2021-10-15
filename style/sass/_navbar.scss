@@ -1,0 +1,32 @@
+.navbar {
+  padding: 0.5em 2.5em;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  transition: all 0.2s ease;
+
+  .navbar-content {
+    padding: 1em 0;
+
+    // Layout
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      width: 6.3em;
+      height: auto;
+      cursor: pointer;
+    }
+
+    .navlinks {
+      a {
+        margin: 0 0.3em;
+        opacity: 0.8;
+      }
+    }
+  }
+  @media screen and (max-width: 375px) {
+    padding: 0.5em 1em;
+  }
+}

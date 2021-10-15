@@ -1,0 +1,77 @@
+.wrapper {
+  width: 100%;
+  position: relative;
+  margin-top: 8em;
+
+  .content {
+    width: 100%;
+    z-index: 5;
+
+    // Layout
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .intro-illustration {
+      width: auto;
+      height: 22em;
+      margin: auto;
+      z-index: 5;
+    }
+
+    .intro-content {
+      margin: auto;
+      text-align: center;
+      max-width: 31em;
+      width: auto;
+      z-index: 5;
+
+      h1 {
+        margin: 1em 0;
+        font-size: 1.6em;
+      }
+
+      p {
+        font-size: 0.83em;
+        opacity: 0.8;
+        line-height: 1.8em;
+      }
+
+      .intro-button {
+        border: none;
+        outline: none;
+        padding: 1em 6.5em;
+        margin-top: 1em;
+        font-weight: $fontWeight2;
+        border-radius: 15px;
+        background: $cyan;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .bg-curv {
+    width: 100vw;
+    height: 50vh;
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    background: url("../../images/bg-curvy-desktop.svg") no-repeat center center /
+      cover;
+  }
+
+  @media screen and (max-width: 425px) {
+    .intro-content {
+      padding: 0 1em;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .content {
+      padding: 0 1em;
+      .intro-illustration {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

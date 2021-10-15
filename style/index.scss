@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import "./sass/global";
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $bodyFont;
+  color: $white;
+  @import "./sass/main";
+  @import "./sass/navbar";
+  @import "./sass/intro";
+  @import "./sass/services";
+  @import "./sass/about";
+  @import "./sass/tertimonial";
+  @import "./sass/email";
+  @import "./sass/footer";
+}
